@@ -8,9 +8,12 @@ add_executable(ucore
     ${SRC}
 )
 
-set(asio_DIR /home/pi/sdk/vcpkg/installed/arm64-linux/share/asio)
-
 find_package(fmt CONFIG REQUIRED)
 find_package(asio CONFIG REQUIRED)
+find_package(tomlplusplus CONFIG REQUIRED)
 target_link_libraries(ucore PRIVATE fmt::fmt)
 target_link_libraries(ucore PRIVATE asio asio::asio)
+target_link_libraries(ucore PRIVATE tomlplusplus::tomlplusplus)
+
+configure_file(server.toml ${PROJECT_BINARY_DIR}/ucore COPYONLY)
+
