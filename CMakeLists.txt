@@ -4,3 +4,4 @@ project(unetwork VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(ucore)
+add_subdirectory(test)
