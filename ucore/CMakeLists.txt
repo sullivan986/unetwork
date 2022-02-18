@@ -1,6 +1,7 @@
 aux_source_directory(src SRC)
 
 include_directories(include)
+include_directories(module)
 
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread")
 

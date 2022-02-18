@@ -2,6 +2,10 @@ aux_source_directory(src SRC)
 
 include_directories(include)
 
+aux_source_directory(src SRC)
+
+include_directories(include)
+
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread")
 
 add_executable(test
