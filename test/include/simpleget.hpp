@@ -64,7 +64,7 @@ public:
         if (!std::regex_match(url_, sm, re))
         {
             err_ = "invalid url";
-            finish_callback_(shared_from_this());
+            finish_callback_(std::shared_from_this());
             return;
         }
 
