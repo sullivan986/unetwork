@@ -6,6 +6,8 @@
 namespace umodule
 {
     class config
+    {
+    }
 
 } // namespace umodule
 #endif
