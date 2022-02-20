@@ -17,4 +17,3 @@ target_link_libraries(ucore PRIVATE asio asio::asio)
 target_link_libraries(ucore PRIVATE tomlplusplus::tomlplusplus)
 
 configure_file(server.toml ${PROJECT_BINARY_DIR}/ucore COPYONLY)
-

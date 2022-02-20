@@ -3,7 +3,9 @@
 
 #include "toml++/toml.h"
 
-namespace umodule
+#include "ucore_preprocessor.h"
+
+namespace ucore
 {
     class config
     {

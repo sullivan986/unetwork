@@ -1,7 +1,15 @@
-cmake_minimum_required(VERSION 3.20.0)
-project(unetwork VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.14)
+
+project(
+    unetwork
+    VERSION 0.0.1
+    DESCRIPTION "A c++ web server with Asio"
+    HOMEPAGE_URL "https://github.com/sullivan986/unetwork"
+    LANGUAGES CXX
+)
 
 set(CMAKE_CXX_STANDARD 20)
 
+
 add_subdirectory(ucore)
-add_subdirectory(test)
+add_subdirectory(examples)

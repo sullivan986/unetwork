@@ -6,5 +6,6 @@
 #endif
 
 //
+#define SERVER_CONFIG_FILE_NAME "server.toml"
 
 #endif
