@@ -1,3 +1,6 @@
+#ifndef SV_HPP
+#define SV_HPP
+
 #include "asio.hpp"
 #include "spdlog/spdlog.h"
 
@@ -67,3 +70,5 @@ private:
     asio::io_context &io_;
     asio::ip::tcp::acceptor acceptor_;
 };
+
+#endif

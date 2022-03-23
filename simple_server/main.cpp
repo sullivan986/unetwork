@@ -1,12 +1,15 @@
 #include "sv.hpp"
+#include "pretreatment.hpp"
 
 int main(int argc, char const *argv[])
 {
-    if (argc != 3)
-    {
-        spdlog::error("usage: httpsvr ip port");
-        return 0;
-    }
+    Preconfig pc("server.toml");
 
+    asio::io_context io;
+    asio::ip::tcp::endpoint ep(asio::ip::make_address(*pc.ip),
+                               *pc.port);
+    Server hs(io, ep);
+    hs.Start();
+    io.run();
     return 0;
 }
