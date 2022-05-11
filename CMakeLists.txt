@@ -12,3 +12,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 
 add_subdirectory(simple_server)
+add_subdirectory(get_req)
