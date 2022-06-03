@@ -11,6 +11,5 @@ int main(int argc, char const *argv[])
     asio::error_code ec;
     asio::io_context io;
 
-    asio::ip::tcp::resolver::query resolver_query(dom, 80, asio::ip::tcp::resolver::query::numeric_service);
     return 0;
 }
