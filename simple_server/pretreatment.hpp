@@ -15,7 +15,7 @@ public:
 
     Preconfig() {}
 
-    constexpr void ParesFile(std::string_view confpath)
+    void ParesFile(std::string_view confpath)
     {
         _tb = toml::parse_file(confpath);
         port = *_tb["server"]["port"].value<int32_t>();
