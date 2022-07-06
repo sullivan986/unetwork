@@ -4,6 +4,26 @@
 
 #include "gst.h"
 
+class Timer
+{
+private:
+    asio::steady_timer timer_;
+    asio::io_context &io_;
+    int time_sec;
+
+public:
+    Timer(asio::io_context &io) : io_(io), timer_(io_)
+    {
+        timer_.expires_after(asio::chrono::seconds(1));
+        timer_.async_wait(
+            [this](const asio::error_code &)
+            {
+                spdlog::info("Hi~");
+            });
+    }
+    ~Timer();
+};
+
 void print(asio::steady_timer &timer, int &count)
 {
     if (count < 10)

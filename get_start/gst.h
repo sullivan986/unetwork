@@ -3,6 +3,6 @@
 
 void basic_timer();
 
-void recv();
+void timer_class();
 
 #endif

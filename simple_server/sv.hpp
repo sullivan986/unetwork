@@ -33,6 +33,10 @@ public:
                                });
     }
 
+    void LoopSent(asio::error_code ec)
+    {
+        }
+
     asio::ip::tcp::socket &Socket()
     {
         return socket_;
